@@ -1,4 +1,4 @@
 module.exports = {
-    title: 'Full-Stack Bootcamp',
+    title: 'Bogdan Iasinovschi - Resume',
     author: 'Bogdan Iasinovschi'   
 }
