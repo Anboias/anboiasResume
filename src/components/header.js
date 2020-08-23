@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
+import ProfilePic from '../media/profile.png'
 
-import headerStyles from './header.module.scss'
+// import headerStyles from './header.module.scss'
 
 const Header = () => {
     const data = useStaticQuery(graphql`
@@ -15,21 +16,64 @@ const Header = () => {
     `)
 
     return (
-        <header className={headerStyles.header}> 
-            <h1>
-                <Link className={headerStyles.title} to="/">
-                    {data.site.siteMetadata.title}
-                </Link>
-            </h1>
-            <nav>
-                <ul className={headerStyles.navList}>
-                    <li><Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/">Home</Link></li>
-                    <li><Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/contact">Contact</Link></li>
-                    <li><Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/about">About</Link></li>
-                    <li><Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/blog">Blog</Link></li>
-                </ul>
-            </nav>
-        </header>
+        // <div>
+        //     <div className="container">
+        //         <h1>Header</h1>
+        //     </div>
+        // </div>
+            <header className="masthead">
+                <div className="container h-100">
+                    <div className="row h-100">
+                        <div className="col-12 my-auto">
+                            {/* <h1 className="font-weight-bold text-light wow display-1">NU TOT EI!</h1> */}
+                            <img 
+                                src={ProfilePic} 
+                                className="rounded-circle image-custom shadow-lg my-3" 
+                                alt="100x100"
+                            />
+                            <h2 className="text-light text-center font-weight-bold mb-1">Bogdan Iasinovschi</h2>
+                            <p className="text-light text-center font-weight-bold mt-0">A passionate Web Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+    //     <nav className="navbar navbar-expand-sm navbar-dark bg-transparent p-4 fixed-top" id="mainNav" >
+    //     <div className="container">
+    //         <a className="navbar-brand text-light font-weight-bold js-scroll-trigger" href="/">#nutotei</a>
+    //         <button 
+    //             className="navbar-toggler navbar-toggler-right font-weight-bold text-light rounded" 
+    //             type="button" 
+    //             data-toggle="collapse" 
+    //             data-target="#navbarResponsive" 
+    //             aria-controls="navbarResponsive" 
+    //             aria-expanded="false" 
+    //             aria-label="Toggle navigation">Meniu <i className="fas fa-bars"></i>
+    //         </button>
+    //         <div className="collapse navbar-collapse" id="navbarResponsive">
+    //             <ul className="navbar-nav ml-auto">
+    //                 <li className="nav-item mx-0 mx-lg-1"><a className="nav-link active py-1 px-2 px-lg-3 text-light font-weight-bold rounded js-scroll-trigger" href="/">ACASĂ</a>
+    //                 </li>
+    //                 <li className="nav-item mx-0 mx-lg-1"><a className="nav-link py-1 px-2 px-lg-3 text-light font-weight-bold rounded js-scroll-trigger" href="#footer">CV-URI</a>
+    //                 </li>
+    //             </ul>
+    //         </div>
+    //     </div>
+    // </nav>
+        // <header className="header-custom"> 
+        //     <h1 className="">
+        //         <Link className="title-custom" to="/">
+        //             {data.site.siteMetadata.title}
+        //         </Link>
+        //     </h1>
+        //     <nav>
+        //         <ul className="nav-list-custom">
+        //             <li><Link className="nav-item-custom" activeClassName="active-nav-item-custom" to="/">Home</Link></li>
+        //             <li><Link className="nav-item-custom" activeClassName="active-nav-item-custom" to="/contact">Contact</Link></li>
+        //             <li><Link className="nav-item-custom" activeClassName="active-nav-item-custom" to="/about">About</Link></li>
+        //             <li><Link className="nav-item-custom" activeClassName="active-nav-item-custom" to="/blog">Blog</Link></li>
+        //         </ul>
+        //     </nav>
+        // </header>
     )
 }
 

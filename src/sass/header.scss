@@ -1,0 +1,66 @@
+* {
+    font-family: Roboto, "Montserrat", BlinkMacSystemFont, -apple-system,  "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.masthead {
+    // height: 30vh;
+    /* min-height: 500px; */
+    // background-image: url('https://source.unsplash.com/wn-KYaHwcis/1148x750');
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url('https://source.unsplash.com/oMpAz-DN-9I');
+    /* Replace code with unsplash ID */
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    // padding-top: 4rem;
+    // padding-bottom: 5rem;   
+}
+
+.image-custom {
+    max-height: 180px;
+    border: 10px solid lightblue;
+    display: block;
+    margin: auto;
+}
+
+.header-custom {
+    padding: 1rem 0 3rem;
+}
+
+.title-custom {
+    color: #000000;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.title-custom:hover {
+    color: #919191;
+    text-decoration: none;
+}
+
+.nav-list-custom {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+.nav-item-custom {
+    color: #999999;
+    font-size: .9rem;
+    margin-right: 1.3rem;
+    text-decoration: none;
+}
+
+.nav-item-custom:hover {
+    color: #666666;
+    text-decoration: none;
+
+}
+
+.active-nav-item-custom {
+    color: #333333;
+}
+
