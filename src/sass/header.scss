@@ -33,7 +33,7 @@
 .nav-item {
     a {
         // color:;
-        color: $dark-color;
+        color: $dark-color!important;
     }
     a:hover {
         color: $dark-color!important;

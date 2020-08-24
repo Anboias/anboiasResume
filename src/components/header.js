@@ -34,9 +34,9 @@ const Header = () => {
                             <div className="text-center text-custom-white mb-3 pb-3">
                                 <p className="m-0 p-0 h2">Hello,</p>
                                 <p className="m-0 p-0">I am <strong>Bogdan Iasinovschi,</strong></p>
-                                <p className="m-0 p-0"><strong>29</strong> years old, </p>
-                                <p className="m-0 p-0">based in <strong>Bucharest, Romania</strong></p>
-                                <p className="m-0 p-0">and I am a passionate <strong>Web Developer</strong>, specialized in <strong>React</strong> and <strong>Bootstrap</strong>.</p>
+                                <p className="m-0 p-0">[Icon] <strong>29</strong> years old, </p>
+                                <p className="m-0 p-0">[Icon] based in <strong>Cluj-Napoca, Romania</strong></p>
+                                <p className="m-0 p-0">[Icon] and I am a passionate <strong>Web Developer</strong>, specialized in <strong>React</strong> and <strong>Bootstrap</strong>.</p>
                             </div>
                         </div>
                     </div>
