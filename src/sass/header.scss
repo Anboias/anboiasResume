@@ -33,17 +33,17 @@
 .nav-item {
     a {
         // color:;
-        color: $dark-color!important;
+        color: $color-dark!important;
     }
     a:hover {
-        color: $dark-color!important;
+        color: $color-dark!important;
         // font-size: 1.1rem;
         font-weight: bold;
     }
 }
 
 .active-nav-item {
-    color: $dark-color!important;
+    color: $color-dark!important;
     font-weight: bold;
 
 }

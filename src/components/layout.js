@@ -1,24 +1,22 @@
-import React from 'react'
+import React from "react"
 
-import Header from './header'
-import Navbar from './navbar'
-import Footer from './footer'
+import Header from "./header"
+import Navbar from "./navbar"
+import Footer from "./footer"
 
-import '../styles/index.scss'
+import "../styles/index.scss"
 
 // import layoutStyles from './layout.module.scss'
 
-const Layout = (props) => {
-    return (
-        <div>
-            <Header />
-            <Navbar />
-            <div className="container">
-                {props.children}
-            </div>
-            <Footer />
-        </div>
-    )
+const Layout = props => {
+  return (
+    <div className="color-dark">
+      <Header />
+      <Navbar />
+      <div className="container">{props.children}</div>
+      <Footer />
+    </div>
+  )
 }
 
 export default Layout
