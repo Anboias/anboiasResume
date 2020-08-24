@@ -10,7 +10,7 @@ import "../styles/index.scss"
 
 const Layout = props => {
   return (
-    <div className="color-dark">
+    <div className="background-color-gray">
       <Header />
       <Navbar />
       <div className="container">{props.children}</div>

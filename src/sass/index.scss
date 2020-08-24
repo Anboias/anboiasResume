@@ -1,5 +1,6 @@
 $color-dark: #2A2A2A;
 $color-light: #555555;
+$color-gray: #EFEFEF;
 $color-white: #FFFCFF;
 
 .color-dark {
@@ -10,6 +11,23 @@ $color-white: #FFFCFF;
 }
 .color-white {
     color: $color-white;
+}
+.color-gray {
+    color: $color-gray;
+}
+
+
+.background-color-dark {
+    background-color: $color-dark;
+}
+.background-color-light {
+    background-color: $color-light;
+}
+.background-color-white {
+    background-color: $color-white;
+}
+.background-color-gray {
+    background-color: $color-gray;
 }
 
 @import "./blog.scss";
