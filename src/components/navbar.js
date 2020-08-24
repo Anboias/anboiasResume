@@ -31,10 +31,10 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarResponsive">
                     <ul className="navbar-nav m-auto mb-0">
-                        <li className="nav-item mb-0"><Link className="nav-link text-dark font-weight-bold rounded active" to="/">Home</Link></li>
-                        <li className="nav-item mb-0"><Link className="nav-link text-dark font-weight-bold rounded" to="/about">About</Link></li>
-                        <li className="nav-item mb-0"><Link className="nav-link text-dark font-weight-bold rounded" to="/contact">Portfolio</Link></li>
-                        <li className="nav-item mb-0"><Link className="nav-link text-dark font-weight-bold rounded" to="/blog">Blog</Link></li>
+                        <li className="nav-item m-0"><Link className="nav-link" activeClassName="active-nav-item" to="/">HOME</Link></li>
+                        <li className="nav-item m-0"><Link className="nav-link" activeClassName="active-nav-item" to="/about">ABOUT</Link></li>
+                        <li className="nav-item m-0"><Link className="nav-link" activeClassName="active-nav-item" to="/contact">PORTFOLIO</Link></li>
+                        <li className="nav-item m-0"><Link className="nav-link" activeClassName="active-nav-item" to="/blog">BLOG</Link></li>
                     </ul>
                 </div>
             {/* </div> */}

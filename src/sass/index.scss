@@ -1,3 +1,17 @@
+$dark-color: #2A2A2A;
+$light-color: #555555;
+$white-color: #FFFCFF;
+
+.text-custom-dark {
+    color: $dark-color;
+}
+.text-custom-light {
+    color: $light-color;
+}
+.text-custom-white {
+    color: $white-color;
+}
+
 @import "./blog.scss";
 @import "./footer.scss";
 @import "./header.scss";

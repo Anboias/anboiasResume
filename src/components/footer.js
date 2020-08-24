@@ -15,8 +15,9 @@ const Footer = () => {
     `)
     return (
         <footer className="footer fixed-bottom bg-dark text-white-50">
-            <div className="container text-center">
-                <p className="my-auto p-2">Created by {data.site.siteMetadata.author}, © 2020</p>
+            <div className="container text-center my-2">
+                <p className="my-auto p-0 m-0">Created by {data.site.siteMetadata.author}, © 2020</p>
+                <p className="my-auto p-0 m-0">© Facebook | © Twitter | © Github</p>
             </div>
         </footer>
     )

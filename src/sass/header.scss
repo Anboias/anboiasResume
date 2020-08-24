@@ -7,8 +7,8 @@
     /* min-height: 500px; */
     // background-image: url('https://source.unsplash.com/wn-KYaHwcis/1148x750');
     background-image: linear-gradient(
-        rgba(0, 0, 0, 0.1),
-        rgba(0, 0, 0, 0.1)
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
       ),
       url('https://source.unsplash.com/oMpAz-DN-9I');
     /* Replace code with unsplash ID */
@@ -21,7 +21,7 @@
 
 .image-custom {
     max-height: 180px;
-    border: 10px solid lightblue;
+    border: 10px solid cadetblue;
     display: block;
     margin: auto;
 }
@@ -30,37 +30,65 @@
     padding: 1rem 0 3rem;
 }
 
+.nav-item {
+    a {
+        // color:;
+        color: $dark-color;
+    }
+    a:hover {
+        color: $dark-color!important;
+        // font-size: 1.1rem;
+        font-weight: bold;
+    }
+}
+
+.active-nav-item {
+    color: $dark-color!important;
+    font-weight: bold;
+
+}
+
+// .navbar-nav > .active > a {
+//     color: aqua;
+//     background-color: chartreuse;    
+// }
+
+// .nav-item > a:hover {
+//     color: aqua;
+// }
+
+
+
+
+
+
+
+/* Below not used */
 .title-custom {
     color: #000000;
     font-size: 2rem;
     text-decoration: none;
 }
-
 .title-custom:hover {
     color: #919191;
     text-decoration: none;
 }
-
 .nav-list-custom {
     display: flex;
     list-style-type: none;
     margin: 0;
+    color: blue;
 }
-
 .nav-item-custom {
-    color: #999999;
+    color: red;
     font-size: .9rem;
     margin-right: 1.3rem;
     text-decoration: none;
 }
-
 .nav-item-custom:hover {
-    color: #666666;
+    color: green;
     text-decoration: none;
-
 }
-
 .active-nav-item-custom {
-    color: #333333;
+    color: red;
 }
-
