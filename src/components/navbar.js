@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="navbar navbar-expand-sm navbar-dark bg-light p-0"
+      className="navbar navbar-expand-sm navbar-dark bg-light shadow-lg p-0"
       id="mainNav"
     >
       {/* <div className="container "> */}
@@ -24,7 +24,7 @@ const Navbar = () => {
                     <Link className="navbar-brand py-1 px-2 px-lg-3 text-dark font-weight-bold js-scroll-trigger" to="/">{data.site.siteMetadata.title}</Link>
                 </div> */}
       <button
-        className="navbar-toggler navbar-toggler-right font-weight-bold text-dark rounded ml-auto"
+        className="navbar-toggler navbar-toggler-right font-weight-bold text-dark rounded"
         type="button"
         data-toggle="collapse"
         data-target="#navbarResponsive"
