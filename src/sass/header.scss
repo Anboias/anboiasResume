@@ -1,27 +1,37 @@
 * {
-    font-family: Roboto, "Montserrat", BlinkMacSystemFont, -apple-system,  "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Roboto, limelight, "Montserrat", BlinkMacSystemFont, -apple-system,  "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
 
 .masthead {
     // height: 30vh;
     /* min-height: 500px; */
     // background-image: url('https://source.unsplash.com/wn-KYaHwcis/1148x750');
-    background-image: linear-gradient(
+    background: linear-gradient(
         rgba(0, 0, 0, 0.3),
         rgba(0, 0, 0, 0.3)
       ),
-      url('https://source.unsplash.com/oMpAz-DN-9I');
+      url('https://source.unsplash.com/PFxf8pCM6hg');
+    //   url('https://source.unsplash.com/oMpAz-DN-9I');
     /* Replace code with unsplash ID */
     background-size: cover;
-    background-position: bottom center;
+    background-position: bottom;
     background-repeat: no-repeat;
     // padding-top: 4rem;
     // padding-bottom: 5rem;   
+    //  position: fixed;
+    // bottom: 0;
+    // left: 0;
+    width: 100%;
+    height: 30vh;
+    // background-image: url(../images/background.jpg);
+    background-size: cover;
+    // z-index: -1;
 }
 
 .image-custom {
-    max-height: 180px;
-    border: 10px solid $color-gray;
+    max-height: 230px;
+    border: 12px solid #fff;
     display: block;
     margin: auto;
 }
@@ -30,22 +40,58 @@
     padding: 1rem 0 3rem;
 }
 
+.header-text-custom {
+    p {        
+        margin: 0px;
+
+        padding: 5px;
+        background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+        background: rgba(40, 40, 40, 0.5);
+    }
+}
+
+.ul-wrapper {
+
+    // border-top: 1px groove $color-blue;
+    // border-bottom: 1px groove $color-blue;
+}
+
+.btn-cv-custom {
+    color: $color-blue;
+    border-color: $color-blue; 
+    font-size: 1rem;
+    // padding: 5px;
+}
+
+.btn-cv-custom:hover {
+    background-color: $color-blue;
+}
+
+
 .nav-item {
+    // padding: 5px 10px;
     a {
         // color:;
-        color: $color-dark!important;
+        color: $color-gray-light;
+        // font-weight: bold;
+
     }
     a:hover {
-        color: $color-dark!important;
+        color: $color-gray-strong!important;
         // font-size: 1.1rem;
-        font-weight: bold;
+        // font-weight: bold;
     }
 }
 
 .active-nav-item {
-    color: $color-dark!important;
-    font-weight: bold;
+    color: $color-gray-strong!important;
+    // font-weight: bold;
 
+}
+
+#mainNav {
+    margin: 20px 0;
+    // border-top: 1px solid green!important;
 }
 
 // .navbar-nav > .active > a {

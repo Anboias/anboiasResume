@@ -1,0 +1,47 @@
+$color-blue: #2176AE; // star command blue
+$color-black: #272727; // eerie black
+$color-gray-light: rgb(144, 144, 144);
+$color-gray-strong: #2e2e2e;
+
+
+$color-one: #f2f2f2;
+$color-two: #c4bdb1;
+$color-three: #23395B; // blue
+$color-four: #CA054D; /// blue
+$color-white: #fff; // red
+
+.color-one {
+    color: $color-one;
+}
+.color-two {
+    color: $color-two;
+}
+.color-three {
+    color: $color-three;
+}
+.color-four {
+    color: $color-four;
+}
+.color-white {
+    color: #fff;
+}
+
+
+.background-color-one {
+    background-color: $color-one;
+}
+.background-color-two {
+    background-color: $color-two;
+}
+.background-color-three {
+    background-color: red;
+    position: relative;
+    height: 100%;
+}
+.background-color-four {
+    background-color: $color-four;
+}
+
+.background-color-white {
+    background-color: $color-white;
+}

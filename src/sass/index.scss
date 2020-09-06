@@ -1,36 +1,19 @@
-$color-dark: #2A2A2A;
-$color-light: #555555;
-$color-gray: #EFEFEF;
-$color-white: #FFFCFF;
-
-.color-dark {
-    color: $color-dark;
-}
-.color-light {
-    color: $color-light;
-}
-.color-white {
-    color: $color-white;
-}
-.color-gray {
-    color: $color-gray;
+html, body {
+  height: 100%;
+  // background-color: #f0f2f4;
 }
 
-
-.background-color-dark {
-    background-color: $color-dark;
-}
-.background-color-light {
-    background-color: $color-light;
-}
-.background-color-white {
-    background-color: $color-white;
-}
-.background-color-gray {
-    background-color: $color-gray;
+.vertical-timeline::before {
+    // background-color: #0B3954!important;
 }
 
+.vertical-timeline-element-date {
+    // color: #0B3954!important;
+}
+
+@import "./colors.scss";
 @import "./blog.scss";
 @import "./footer.scss";
 @import "./header.scss";
 @import "./layout.scss";
+@import "./home.scss";

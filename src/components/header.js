@@ -1,85 +1,62 @@
-import React from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
-import ProfilePic from '../media/profile.png'
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import ProfilePic from "../media/profile.png"
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faReact,
+  faBirthdayCake,
+  faDownload,
+} from "@fortawesome/free-solid-svg-icons"
 
 // import headerStyles from './header.module.scss'
 
 const Header = () => {
-    const data = useStaticQuery(graphql`
-        query {
-            site {
-                siteMetadata {
-                    title
-                }
-            }
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
         }
-    `)
+      }
+    }
+  `)
 
-    return (
-        // <div>
-        //     <div className="container">
-        //         <h1>Header</h1>
-        //     </div>
-        // </div>
-            <header className="masthead">
-                <div className="container h-100">
-                    <div className="row h-100">
-                        <div className="col-12 my-auto">
-                            {/* <h1 className="font-weight-bold text-light wow display-1">NU TOT EI!</h1> */}
-                            <img 
-                                src={ProfilePic} 
-                                className="rounded-circle image-custom shadow-lg my-3" 
-                                alt="100x100"
-                            />
-                            <div className="text-center color-white mb-3 pb-3">
-                                <p className="m-0 p-0 h2">Hello,</p>
-                                <p className="m-0 p-0">I am <strong>Bogdan Iasinovschi,</strong></p>
-                                <p className="m-0 p-0">[Icon] <strong>29</strong> years old, </p>
-                                <p className="m-0 p-0">[Icon] based in <strong>Cluj-Napoca, Romania</strong></p>
-                                <p className="m-0 p-0">[Icon] and I am a passionate <strong>Web Developer</strong>, specialized in <strong>React</strong> and <strong>Bootstrap</strong>.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-    //     <nav className="navbar navbar-expand-sm navbar-dark bg-transparent p-4 fixed-top" id="mainNav" >
-    //     <div className="container">
-    //         <a className="navbar-brand text-light font-weight-bold js-scroll-trigger" href="/">#nutotei</a>
-    //         <button 
-    //             className="navbar-toggler navbar-toggler-right font-weight-bold text-light rounded" 
-    //             type="button" 
-    //             data-toggle="collapse" 
-    //             data-target="#navbarResponsive" 
-    //             aria-controls="navbarResponsive" 
-    //             aria-expanded="false" 
-    //             aria-label="Toggle navigation">Meniu <i className="fas fa-bars"></i>
-    //         </button>
-    //         <div className="collapse navbar-collapse" id="navbarResponsive">
-    //             <ul className="navbar-nav ml-auto">
-    //                 <li className="nav-item mx-0 mx-lg-1"><a className="nav-link active py-1 px-2 px-lg-3 text-light font-weight-bold rounded js-scroll-trigger" href="/">ACASĂ</a>
-    //                 </li>
-    //                 <li className="nav-item mx-0 mx-lg-1"><a className="nav-link py-1 px-2 px-lg-3 text-light font-weight-bold rounded js-scroll-trigger" href="#footer">CV-URI</a>
-    //                 </li>
-    //             </ul>
-    //         </div>
-    //     </div>
-    // </nav>
-        // <header className="header-custom"> 
-        //     <h1 className="">
-        //         <Link className="title-custom" to="/">
-        //             {data.site.siteMetadata.title}
-        //         </Link>
-        //     </h1>
-        //     <nav>
-        //         <ul className="nav-list-custom">
-        //             <li><Link className="nav-item-custom" activeClassName="active-nav-item-custom" to="/">Home</Link></li>
-        //             <li><Link className="nav-item-custom" activeClassName="active-nav-item-custom" to="/contact">Contact</Link></li>
-        //             <li><Link className="nav-item-custom" activeClassName="active-nav-item-custom" to="/about">About</Link></li>
-        //             <li><Link className="nav-item-custom" activeClassName="active-nav-item-custom" to="/blog">Blog</Link></li>
-        //         </ul>
-        //     </nav>
-        // </header>
-    )
+  return (
+    // <header className="mastheadDISABLED h-100 my-auto mx-auto p-3">
+    <div className="row h-100 mb-0">
+      <div className="col-12">
+        <img
+          src={ProfilePic}
+          className="rounded-circle image-custom shadow-lg mt-3 mx-auto"
+          alt="100x100"
+        />
+      </div>
+      <div className="col-12 h-100">
+        <div className="text-center w-50 mx-auto my-0">
+          <p className="p-0 mt-2 mb-0 h1">Bogdan Iasinovschi</p>
+          <p className="text-secondary p-0 m-0">
+            <small>React &bull; Gatsby &bull; Bootstrap</small>
+          </p>
+        </div>
+      </div>
+      <div className="col-12 h-100">
+        <div className="text-center w-50 mx-auto my-3">
+          <button
+            type="button"
+            className="btn btn-outline-info btn-cv-custom py-0 px-1"
+          >
+            CV{" "}
+            <FontAwesomeIcon
+              icon={faDownload}
+              className="ml-0"
+            ></FontAwesomeIcon>
+          </button>
+        </div>
+      </div>
+    </div>
+    // </header>
+  )
 }
 
 export default Header

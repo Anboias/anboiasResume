@@ -1,22 +1,26 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+// import { Link, graphql, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from "@fortawesome/free-solid-svg-icons"
 
 // import headerStyles from './header.module.scss'
 
 const Navbar = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  //   const data = useStaticQuery(graphql`
+  //     query {
+  //       site {
+  //         siteMetadata {
+  //           title
+  //         }
+  //       }
+  //     }
+  //   `)
 
   return (
     <nav
-      className="navbar navbar-expand-sm navbar-dark bg-light shadow-lg p-0"
+      className="navbar navbar-expand-sm navbar-darkDISABLED bg-lightDISABLED shadow-lgDISABELD w-100 p-0 m-0"
       id="mainNav"
     >
       {/* <div className="container "> */}
@@ -24,7 +28,7 @@ const Navbar = () => {
                     <Link className="navbar-brand py-1 px-2 px-lg-3 text-dark font-weight-bold js-scroll-trigger" to="/">{data.site.siteMetadata.title}</Link>
                 </div> */}
       <button
-        className="navbar-toggler navbar-toggler-right font-weight-bold text-dark rounded"
+        className="navbar-toggler navbar-toggler-right font-weight-bold text-dark rounded mr-auto p-2 my-2"
         type="button"
         data-toggle="collapse"
         data-target="#navbarResponsive"
@@ -32,43 +36,44 @@ const Navbar = () => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        Menu <i className="fas fa-bars"></i>
+        <FontAwesomeIcon className="mr-2" icon={faBars}></FontAwesomeIcon>
+        Menu
       </button>
-      <div className="collapse navbar-collapse" id="navbarResponsive">
-        <ul className="navbar-nav m-auto mb-0">
-          <li className="nav-item m-0">
-            <Link className="nav-link" activeClassName="active-nav-item" to="/">
-              HOME
-            </Link>
-          </li>
-          <li className="nav-item m-0">
-            <Link
-              className="nav-link"
-              activeClassName="active-nav-item"
-              to="/about"
-            >
-              ABOUT
-            </Link>
-          </li>
-          <li className="nav-item m-0">
-            <Link
-              className="nav-link"
-              activeClassName="active-nav-item"
-              to="/contact"
-            >
-              PORTFOLIO
-            </Link>
-          </li>
-          <li className="nav-item m-0">
-            <Link
-              className="nav-link"
-              activeClassName="active-nav-item"
-              to="/blog"
-            >
-              BLOG
-            </Link>
-          </li>
-        </ul>
+      <div
+        className="collapse navbar-collapse my-3DISABLED"
+        id="navbarResponsive"
+      >
+        <div className="ul-wrapper mx-auto mt-0 py-0">
+          <ul className="navbar-nav m-auto">
+            <li className="nav-item m-0 pl-0 pr-3">
+              <Link
+                className="nav-link m-0 p-1"
+                activeClassName="active-nav-item"
+                to="/"
+              >
+                Home
+              </Link>
+            </li>
+            <li className="nav-item m-0 pl-0 pr-3">
+              <Link
+                className="nav-link m-0 p-1"
+                activeClassName="active-nav-item"
+                to="/experienceeducation"
+              >
+                Experience &amp; Education
+              </Link>
+            </li>
+            <li className="nav-item m-0 pl-0 pr-3">
+              <Link
+                className="nav-link m-0 p-1"
+                activeClassName="active-nav-item"
+                to="/blog"
+              >
+                Portfolio
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
       {/* </div> */}
     </nav>

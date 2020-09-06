@@ -14,8 +14,8 @@ const Footer = () => {
     }
   `)
   return (
-    <footer className="footer fixed-bottom bg-dark text-white-50">
-      <div className="container text-center my-2">
+    <footer className="footer fixed-bottom">
+      <div className="text-center py-1 footer-custom">
         <p className="my-auto p-0 m-0">
           Created by {data.site.siteMetadata.author}, © 2020
         </p>

@@ -27,16 +27,18 @@ const BlogPage = () => {
   return (
     <Layout>
       <Head title="Blog" />
-      <ol className="posts-custom">
-        {edges.map(edge => (
-          <li className="post-custom">
-            <Link to={"/blog/" + edge.node.slug}>
-              <h2>{edge.node.title}</h2>
-              <p>{edge.node.publishedDate}</p>
-            </Link>
-          </li>
-        ))}
-      </ol>
+      <div className="col-12">
+        <ol className="posts-custom">
+          {edges.map(edge => (
+            <li className="post-custom">
+              <Link to={"/blog/" + edge.node.slug}>
+                <h2>{edge.node.title}</h2>
+                <p>{edge.node.publishedDate}</p>
+              </Link>
+            </li>
+          ))}
+        </ol>
+        </div>
     </Layout>
   )
 }
