@@ -1,18 +1,14 @@
 import React from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBirthdayCake, faCircle } from "@fortawesome/free-solid-svg-icons"
+import { faCircle } from "@fortawesome/free-solid-svg-icons"
 
 const SectionIndex = ({ title, content }) => {
   return (
     <div className="col-6 px-3 my-3">
       <div className="section-index-title">
         <p className="mb-1 font-weight-bold">
-            <FontAwesomeIcon 
-                icon={faCircle} 
-                color="#23395B"
-                size="1x"
-            /> {title}
+          <FontAwesomeIcon icon={faCircle} color="#23395B" size="1x" /> {title}
         </p>
       </div>
       <div className="section-index-content">

@@ -3,10 +3,12 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
+import SectionPortfolio from "../components/sectionPortfolio"
+import Title from "../components/title"
 
 // import blogStyles from './blog.module.scss'
 
-const BlogPage = () => {
+const Portfolio = () => {
   const data = useStaticQuery(graphql`
     query {
       allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
@@ -26,21 +28,23 @@ const BlogPage = () => {
   const edges = data.allContentfulBlogPost.edges
   return (
     <Layout>
-      <Head title="Blog" />
-      <div className="col-12">
-        <ol className="posts-custom">
+      <Head title="Portfolio" />
+
+      <Title title="Portfolio" />
+
+      <div className="col-12 px-3 my-3 w-100 display-inline-blockXXX">
+        {/* <ol className="posts-custom"> */}
           {edges.map(edge => (
-            <li className="post-custom">
-              <Link to={"/blog/" + edge.node.slug}>
-                <h2>{edge.node.title}</h2>
-                <p>{edge.node.publishedDate}</p>
-              </Link>
-            </li>
+            <SectionPortfolio
+              slug={edge.node.slug}
+              title={edge.node.title}
+              publishedDate={edge.node.publishedDate}
+            />
           ))}
-        </ol>
+        {/* </ol> */}
       </div>
     </Layout>
   )
 }
 
-export default BlogPage
+export default Portfolio

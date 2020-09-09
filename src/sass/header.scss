@@ -65,6 +65,23 @@
 
 .btn-cv-custom:hover {
     background-color: $color-blue;
+    border-color: $color-blue; 
+
+}
+
+
+.btn-contact-custom {
+    color: #333;
+    border-color: #f1f1f1; 
+    font-size: 1rem;
+    // padding: 5px;
+}
+
+.btn-contact-custom:hover {
+    color: #333;
+    background-color: #f1f1f1;    
+    border-color: #f1f1f1; 
+
 }
 
 

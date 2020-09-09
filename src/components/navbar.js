@@ -58,16 +58,16 @@ const Navbar = () => {
               <Link
                 className="nav-link m-0 p-1"
                 activeClassName="active-nav-item"
-                to="/experienceeducation"
+                to="/workeducation"
               >
-                Experience &amp; Education
+                Work &amp; Education
               </Link>
             </li>
             <li className="nav-item m-0 pl-0 pr-3">
               <Link
                 className="nav-link m-0 p-1"
                 activeClassName="active-nav-item"
-                to="/blog"
+                to="/portfolio"
               >
                 Portfolio
               </Link>

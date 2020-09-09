@@ -5,13 +5,18 @@ import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import SectionIndex from "../components/sectionIndex"
+import Title from "../components/title"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulAnboiasResume(filter: { type: { regex: "/about.*/" } }) {
+      allContentfulAnboiasResume(
+        filter: { type: { regex: "/about.*/" } }
+        sort: { fields: order, order: ASC }
+      ) {
         edges {
           node {
+            id
             title
             content {
               content
@@ -27,50 +32,42 @@ const IndexPage = () => {
     <Layout>
       <Head title="home" />
 
-        
-        <Title title="About Me" />
+      <Title title="About Me" />
 
-        {edges.map(edge => {
-          if (edge.node.type === "about-me") {
-            return (
-              // null
-              <SectionIndex
-                title={edge.node.title}
-                content={edge.node.content.content}
-              />
-            )
-          } else {
-            return
-          }
-        })}
+      {edges.map(edge => {
+        if (edge.node.type === "about-me") {
+          return (
+            // null
+            <SectionIndex
+              key={edge.node.id}
+              title={edge.node.title}
+              content={edge.node.content.content}
+            />
+          )
+        } else {
+          return null
+        }
+      })}
 
-        <Title title="About My Job" />
+      <Title title="About My Job" />
 
+      {edges.map(edge => {
+        if (edge.node.type === "about-my-job") {
+          return (
+            // null
+            <SectionIndex
+              key={edge.node.id}
+              title={edge.node.title}
+              content={edge.node.content.content}
+            />
+          )
+        } else {
+          return null
+        }
+      })}
 
-        {edges.map(edge => {
-          if (edge.node.type === "about-my-job") {
-            return (
-              // null
-              <SectionIndex
-                title={edge.node.title}
-                content={edge.node.content.content}
-              />
-            )
-          } else {
-            return
-          }
-        })}
-
-        {/* section */}
+      {/* section */}
     </Layout>
-  )
-}
-
-const Title = ({ title }) => {
-  return (
-    <div className="col-12">
-      <h2 className="m-0 mb-0 pb-1 pt-0 border-bottom border-warning w-auto d-inline-block">{title}</h2>
-    </div>
   )
 }
 
