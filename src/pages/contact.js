@@ -3,19 +3,33 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
+import Title from "../components/title"
 
 const ContactPage = () => {
   return (
     <Layout>
       <Head title="Contact" />
-      <h1>ContactPage</h1>
-      <p>Contact me, ok?</p>
-      <p>
-        Go to{" "}
-        <Link to="https://twitter.com/" target="_blank">
-          Twitter
-        </Link>
-      </p>
+
+      <Title title="Contact" />
+
+      <div className="col-12 px-3 my-3 w-100 display-inline-blockXXX">
+        {/* <ol className="posts-custom"> */}
+
+        <div>
+          <ul>
+            <li>biasinovschi@gmail.com</li>
+            <li>0746962776</li>
+          </ul>
+        </div>
+        {/* {edges.map(edge => (
+            <SectionPortfolio
+              slug={edge.node.slug}
+              title={edge.node.title}
+              publishedDate={edge.node.publishedDate}
+            />
+          ))} */}
+        {/* </ol> */}
+      </div>
     </Layout>
   )
 }

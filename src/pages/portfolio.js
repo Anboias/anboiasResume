@@ -34,13 +34,17 @@ const Portfolio = () => {
 
       <div className="col-12 px-3 my-3 w-100 display-inline-blockXXX">
         {/* <ol className="posts-custom"> */}
-          {edges.map(edge => (
+
+        <div>
+          <p>Work in progress...</p>
+        </div>
+        {/* {edges.map(edge => (
             <SectionPortfolio
               slug={edge.node.slug}
               title={edge.node.title}
               publishedDate={edge.node.publishedDate}
             />
-          ))}
+          ))} */}
         {/* </ol> */}
       </div>
     </Layout>

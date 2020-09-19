@@ -12,7 +12,9 @@ const SectionIndex = ({ title, content }) => {
         </p>
       </div>
       <div className="section-index-content">
-        <p className="text-secondary">{content}</p>
+        {content.split("\n").map(paragraph => {
+          return <p className="text-secondary mb-2">{paragraph}</p>
+        })}
       </div>
     </div>
   )
