@@ -30,7 +30,7 @@ const IndexPage = () => {
   const edges = data.allContentfulAnboiasResume.edges
   return (
     <Layout>
-      <Head title="home" />
+      <Head title="About" />
 
       <Title title="About Me" />
 
