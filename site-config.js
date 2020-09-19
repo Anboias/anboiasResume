@@ -1,4 +1,4 @@
 module.exports = {
-  title: "BOGDAN",
+  title: "Bogdan Iasinovschi",
   author: "Bogdan Iasinovschi",
 }
