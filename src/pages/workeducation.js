@@ -38,6 +38,8 @@ const WorkEducation = () => {
       <Head title="Work &amp; Education" />
 
       <Title title="Work &amp; Education" />
+    
+    <div className="my-3 mx-auto">
 
       <VerticalTimeline>
         {edges.map(edge => {
@@ -60,7 +62,7 @@ const WorkEducation = () => {
           }
         })}
       </VerticalTimeline>
-      <br />
+      </div>
     </Layout>
   )
 }

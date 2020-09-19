@@ -27,7 +27,7 @@ const Navbar = () => {
       {/* <div className="navbar-header">
                     <Link className="navbar-brand py-1 px-2 px-lg-3 text-dark font-weight-bold js-scroll-trigger" to="/">{data.site.siteMetadata.title}</Link>
                 </div> */}
-      <button
+      {/* <button
         className="navbar-toggler navbar-toggler-right font-weight-bold text-dark rounded mr-auto p-2 my-2"
         type="button"
         data-toggle="collapse"
@@ -38,9 +38,9 @@ const Navbar = () => {
       >
         <FontAwesomeIcon className="mr-2" icon={faBars}></FontAwesomeIcon>
         Menu
-      </button>
+      </button> */}
       <div
-        className="collapse navbar-collapse my-3DISABLED"
+        className="collapseX navbar-custom navbar-collapseX my-3DISABLED  mx-auto"
         id="navbarResponsive"
       >
         <div className="ul-wrapper mx-auto mt-0 py-0">

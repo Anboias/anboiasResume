@@ -78,6 +78,10 @@
     // padding: 5px;
 }
 
+.navbar-nav {
+    // flex-direction: none;
+}
+
 .btn-contact-custom:hover {
     color: #333;
     background-color: #d2d2d2;    
@@ -107,8 +111,17 @@
 
 }
 
-#mainNav {
+@media (max-width: 577px) {
+    .navbar-custom {
+        // border: 1px solid green;
+        margin-left: 0px!important;
+    }
+}
+
+#mainNav {                
+
     margin: 20px 0;
+
     // border-top: 1px solid green!important;
 }
 

@@ -32,8 +32,8 @@ const Header = () => {
         />
       </div>
       <div className="col-12 h-100">
-        <div className="text-center w-50 mx-auto my-0">
-          <p className="p-0 mt-2 mb-0 h1">Bogdan Iasinovschi</p>
+        <div className="text-center w-50X mx-auto my-0">
+          <p className="p-0 mt-2 mb-0 h3 w-100">Bogdan Iasinovschi</p>
           <p className="text-secondary p-0 m-0">
             <small>React &bull; Gatsby &bull; Bootstrap</small>
           </p>
@@ -49,9 +49,9 @@ const Header = () => {
           >
             <button
               type="button"
-              className="btn btn-outline-info btn-cv-custom mr-3 px-"
+              className="btn btn-outline-info btn-cv-custom mr-3 p-1 h6"
             >
-              Download CV{" "}
+              CV{" "}
               <FontAwesomeIcon
                 icon={faDownload}
                 className="ml-0"
