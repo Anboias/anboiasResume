@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircle } from "@fortawesome/free-solid-svg-icons"
@@ -18,6 +19,12 @@ const SectionIndex = ({ title, content }) => {
       </div>
     </div>
   )
+}
+
+
+SectionIndex.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
 }
 
 export default SectionIndex
