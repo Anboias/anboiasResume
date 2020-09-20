@@ -4,8 +4,8 @@ import PropTypes from "prop-types"
 import { VerticalTimelineElement } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
 
-import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
-import SchoolIcon from '@material-ui/icons/School';
+import BusinessCenterIcon from "@material-ui/icons/BusinessCenter"
+import SchoolIcon from "@material-ui/icons/School"
 
 const SectionWorkEducation = ({
   title,
@@ -15,7 +15,6 @@ const SectionWorkEducation = ({
   dateFrom,
   dateTo,
 }) => {
-
   const customBackgroundColorCard = type === "work" ? "#f4f4f4" : "#f4f4f4" // whitesmoke
   const customBackgroundColorIcon = type === "work" ? "#4787bf" : "#dd5e60"
   const customFontColorCard = type === "work" ? "#555" : "#555"
@@ -36,15 +35,20 @@ const SectionWorkEducation = ({
         backgroundColor: `${customBackgroundColorIcon}`,
         color: `${customFontColorIcon}`,
       }}
-      icon={type === 'work' ? <BusinessCenterIcon style={{color: "white"}} /> : <SchoolIcon style={{color: "white"}}/> }
+      icon={
+        type === "work" ? (
+          <BusinessCenterIcon style={{ color: "white" }} />
+        ) : (
+          <SchoolIcon style={{ color: "white" }} />
+        )
+      }
     >
       <h3 className="vertical-timeline-element-title">{title}</h3>
       <h4 className="vertical-timeline-element-subtitle">{subtitle}</h4>
 
-        {content.split("\n").map(paragraph => {
-          return <p>{paragraph}</p>
-        })}
-      
+      {content.split("\n").map(paragraph => {
+        return <p>{paragraph}</p>
+      })}
     </VerticalTimelineElement>
   )
 }

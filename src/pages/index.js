@@ -1,5 +1,4 @@
 import React from "react"
-// import { Link } from 'gatsby'
 import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
@@ -54,7 +53,6 @@ const IndexPage = () => {
       {edges.map(edge => {
         if (edge.node.type === "about-my-job") {
           return (
-            // null
             <SectionIndex
               key={edge.node.id}
               title={edge.node.title}
@@ -65,8 +63,6 @@ const IndexPage = () => {
           return null
         }
       })}
-
-      {/* section */}
     </Layout>
   )
 }

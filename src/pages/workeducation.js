@@ -38,30 +38,29 @@ const WorkEducation = () => {
       <Head title="Work &amp; Education" />
 
       <Title title="Work &amp; Education" />
-    
-    <div className="my-3 mx-auto">
 
-      <VerticalTimeline>
-        {edges.map(edge => {
-          if (edge) {
-            return (
-              <>
-                <SectionWorkEducation
-                  key={edge.node.id}
-                  title={edge.node.title}
-                  subtitle={edge.node.subtitle}
-                  content={edge.node.content.content}
-                  type={edge.node.type}
-                  dateFrom={edge.node.dateFrom}
-                  dateTo={edge.node.dateTo}
-                />
-              </>
-            )
-          } else {
-            return null
-          }
-        })}
-      </VerticalTimeline>
+      <div className="my-3 mx-auto">
+        <VerticalTimeline>
+          {edges.map(edge => {
+            if (edge) {
+              return (
+                <>
+                  <SectionWorkEducation
+                    key={edge.node.id}
+                    title={edge.node.title}
+                    subtitle={edge.node.subtitle}
+                    content={edge.node.content.content}
+                    type={edge.node.type}
+                    dateFrom={edge.node.dateFrom}
+                    dateTo={edge.node.dateTo}
+                  />
+                </>
+              )
+            } else {
+              return null
+            }
+          })}
+        </VerticalTimeline>
       </div>
     </Layout>
   )

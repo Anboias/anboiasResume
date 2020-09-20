@@ -21,7 +21,6 @@ const SectionIndex = ({ title, content }) => {
   )
 }
 
-
 SectionIndex.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
