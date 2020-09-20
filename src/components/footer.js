@@ -25,7 +25,7 @@ const Footer = () => {
     <footer className="footer fixed-bottom">
       <div className="text-center py-1 footer-custom">
         <p className="my-auto p-0 m-0">
-          Created by {data.site.siteMetadata.author}, © 2020
+          Created by {data.site.siteMetadata.author} © 2020
         </p>
         <a
           href="https://www.facebook.com/bogdan.iasinovschi"

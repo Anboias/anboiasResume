@@ -43,7 +43,7 @@ const Navbar = () => {
         className="collapseX navbar-custom navbar-collapse my-3DISABLED  mx-auto"
         id="navbarResponsive"
       >
-        <div className="ul-wrapper mx-auto mt-0 py-0">
+        <div className="ul-wrapper mx-auto m-0 py-0">
           <ul className="navbar-nav m-auto">
             <li className="nav-item m-0 pl-0 pr-3">
               <Link
