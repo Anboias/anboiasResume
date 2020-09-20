@@ -1,12 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Pen } from "../media/svg/pen"
 
 import { VerticalTimelineElement } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
 
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faCircle } from "@fortawesome/free-solid-svg-icons"
+import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
+import SchoolIcon from '@material-ui/icons/School';
 
 const SectionWorkEducation = ({
   title,
@@ -16,11 +15,9 @@ const SectionWorkEducation = ({
   dateFrom,
   dateTo,
 }) => {
-  // const customColor = type === "work" ? "#0B3954" : "#CA054D"
-  // GENIAL ALBASTTRUL: #284b63
-  // const customBackgroundColorCard = type === "work" ? "#dd5e60" : "#4787bf" // misto culori - steelblue si indianred
+
   const customBackgroundColorCard = type === "work" ? "#f4f4f4" : "#f4f4f4" // whitesmoke
-  const customBackgroundColorIcon = type !== "work" ? "#dd5e60" : "#4787bf"
+  const customBackgroundColorIcon = type === "work" ? "#4787bf" : "#dd5e60"
   const customFontColorCard = type === "work" ? "#555" : "#555"
   const customFontColorIcon = type === "work" ? "#aea" : "red"
 
@@ -39,12 +36,15 @@ const SectionWorkEducation = ({
         backgroundColor: `${customBackgroundColorIcon}`,
         color: `${customFontColorIcon}`,
       }}
-      icon={null}
+      icon={type === 'work' ? <BusinessCenterIcon style={{color: "white"}} /> : <SchoolIcon style={{color: "white"}}/> }
     >
       <h3 className="vertical-timeline-element-title">{title}</h3>
       <h4 className="vertical-timeline-element-subtitle">{subtitle}</h4>
 
-      <p>{content}</p>
+        {content.split("\n").map(paragraph => {
+          return <p>{paragraph}</p>
+        })}
+      
     </VerticalTimelineElement>
   )
 }
