@@ -17,7 +17,7 @@ const Layout = props => {
           </div>
         </div>
       </div>
-      <div className="row my-3 py-3 mx-auto home">{props.children}</div>
+      <div className="row mb-3 mt-1 pb-3 pt-1 mx-auto home">{props.children}</div>
       <Footer />
     </div>
   )

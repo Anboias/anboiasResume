@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="navbar navbar-expand-sm navbar-darkDISABLED bg-lightDISABLED shadow-lgDISABELD w-100 p-0 m-0"
+      className="navbar navbar-expand-sm navbar-darkDISABLED bg-lightDISABLED shadow-lgDISABELD w-100 p-0 m-0 mt-3"
       id="mainNav"
     >
       {/* <div className="container "> */}
@@ -40,7 +40,7 @@ const Navbar = () => {
         Menu
       </button> */}
       <div
-        className="collapseX navbar-custom navbar-collapseX my-3DISABLED  mx-auto"
+        className="collapseX navbar-custom navbar-collapse my-3DISABLED  mx-auto"
         id="navbarResponsive"
       >
         <div className="ul-wrapper mx-auto mt-0 py-0">
