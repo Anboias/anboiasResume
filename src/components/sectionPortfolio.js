@@ -1,28 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
+import Img from 'gatsby-image'
 
-const SectionPortfolio = ({ slug, title, publishedDate }) => {
+const SectionPortfolio = ({ title, slug, description, image }) => {
   return (
-    <></>
-    // <li className="post-custom">
-    //    <Link to={"/blog/" + slug}>
-    //  <div className="card" style={{ maxWidth: "200px"}}>
-    //     <img className="card-img-top" src={null} alt="Card image cap" />
-    //     <div className="card-body">
-    //       <h5 className="card-title">Card title</h5>
-    //       <p className="card-text">
-    //         Some quick example text to build on the card title and make up the
-    //         bulk of the card's content.
-    //       </p>
-    //       <a href="#" className="btn btn-primary">
-    //         Go somewhere
-    //       </a>
-    //     </div>
-    //   </div>
-    //     <h2>{title}</h2>
-    //     <p>{publishedDate}</p>
-    //   </Link>
-    // </li>
+    <div className="card mr-3 mt-auto" style={{width: "18rem", display: "inline-block"}}>
+      <Link to={`/portfolio/${slug}`} className="card__image">
+        <Img fluid={image.fluid} />
+      </Link>
+      <div className="card-body">
+        <h5 className="card-title">{title}</h5>
+        <p className="card-text">Src: {image.src}</p>
+        <p className="card-text">{description}</p>
+        <a href="#" className="btn btn-primary"></a>
+      </div>
+    </div>
   )
 }
 

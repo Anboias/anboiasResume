@@ -72,7 +72,7 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
-            {/* <li className="nav-item m-0 pl-0 pr-3">
+            <li className="nav-item m-0 pl-0 pr-3">
               <Link
                 className="nav-link m-0 p-1"
                 activeClassName="active-nav-item"
@@ -80,7 +80,7 @@ const Navbar = () => {
               >
                 Portfolio
               </Link>
-            </li> */}
+            </li>
           </ul>
         </div>
       </div>

@@ -11,40 +11,47 @@ import Title from "../components/title"
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+      allContentfulPortfolioElement(sort: { fields: createdAt, order: DESC }) {
         edges {
           node {
-            title
+            id
             slug
-            publishedDate(formatString: "MMMM Do, YYYY")
-            body {
-              json
+            url
+            title
+            description {
+              description
+            }
+            image {
+              fluid(maxWidth: 450, toFormat: WEBP) {
+                src
+                ...GatsbyContentfulFluid
+              }
             }
           }
         }
       }
     }
   `)
-  const edges = data.allContentfulBlogPost.edges
+  const edges = data.allContentfulPortfolioElement.edges
   return (
     <Layout>
       <Head title="Portfolio" />
 
       <Title title="Portfolio" />
 
-      <div className="col-12 px-3 my-3 w-100 display-inline-blockXXX">
+      <div className="col-12 px-3XXXmy-3 w-100 display-inline-blockXXX">
         {/* <ol className="posts-custom"> */}
 
-        <div>
-          <p>Work in progress...</p>
-        </div>
-        {/* {edges.map(edge => (
+        {edges.map(edge => (
             <SectionPortfolio
-              slug={edge.node.slug}
+              key={edge.node.id}
               title={edge.node.title}
-              publishedDate={edge.node.publishedDate}
+              slug={edge.node.slug}
+              description={edge.node.description.description}
+              url={edge.node.url}
+              image={edge.node.image}
             />
-          ))} */}
+          ))}
         {/* </ol> */}
       </div>
     </Layout>

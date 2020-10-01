@@ -14,7 +14,13 @@ const SectionIndex = ({ title, content }) => {
       </div>
       <div className="section-index-content">
         {content.split("\n").map(paragraph => {
-          return <p className="text-secondary mb-2">{paragraph}</p>
+          let separator = paragraph.indexOf(":");
+          
+          if (separator > -1) {
+            return <p className="text-secondary mb-2"><p className="font-weight-bold">{paragraph.substring(0, separator + 1)}</p> {paragraph.substring(separator + 1)}</p>
+          } else {
+            return <p className="text-secondary mb-2">{paragraph}</p>
+          }
         })}
       </div>
     </div>
